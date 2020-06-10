@@ -1,34 +1,37 @@
 {% extends 'web_personal/base.html' %}
 {% load static %}
-{% block css %} <link href="{% static "web_personal/css/skills.css" %}" rel="stylesheet">{% endblock %}
+{% block css %}
+    <link href="{% static "web_personal/css/skills.css" %}" rel="stylesheet">
+{% endblock %}
 {% block contenido %}
 
-    <header class="masthead" style="background-image: url('{% static "web_personal/img/home-bg.jpg" %}')">
+    <header class="masthead" style="background-image: url('{% static "web_personal/img/skills.png" %}')">
         <div class="overlay"></div>
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-md-10 mx-auto">
                     <div class="site-heading">
 
-<p>HTML</p>
-<div class="container">
-  <div class="skills html">90%</div>
-</div>
+                        <p>HTML</p>
+                        <div class="container">
+                            <div class="skills html" style="width: 70%; background-color: #4CAF50;">70%</div>
+                        </div>
 
-<p>CSS</p>
-<div class="container">
-  <div class="skills css">80%</div>
-</div>
+                        <p>CSS</p>
+                        <div class="container">
+                            <div class="skills css" style="width: 80%; background-color: #eaff1b;">80%</div>
+                        </div>
 
-<p>JavaScript</p>
-<div class="container">
-  <div class="skills js">65%</div>
-</div>
+                        <p>JavaScript</p>
+                        <div class="container">
+                            <div class="skills js" style="width: 65%; background-color: #ff26dc;">65%</div>
+                        </div>
 
-<p>PHP</p>
-<div class="container">
-  <div class="skills php">60%</div>
-</div>
+                        <p>PHP</p>
+                        <div class="container">
+                            <div class="skills php" style="width: 60%; background-color: #ff1c26;">60%</div>
+                        </div>
+
 
                     </div>
                 </div>
