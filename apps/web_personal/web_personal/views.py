@@ -1,30 +1,19 @@
 from django.shortcuts import render
 from datetime import datetime
+from apps.web_personal.web_personal.models import User, usr, Projects, Skills
+from django.forms.models import model_to_dict
+import json
+
 
 # Create your views here.
-from django.template.context_processors import request
 
 
 def index(request):
-    contexto = {
-        'name': 'Emilio Rafael',
-        'carrera': 'Ingeniero en Sistemas',
-        'fecha': datetime.now().year,
-    }
+    usuario = model_to_dict(User.objects.get(pk=1))
+    usuario.update(usr.objects.values('first_name')[0])
+
+    proyectos = [model_to_dict(ele) for ele in Projects.objects.all()]
+    skills = [model_to_dict(ele) for ele in Skills.objects.all()]
+
+    contexto = {'usuario': usuario, 'proyectos': proyectos, 'skills': skills}
     return render(request, 'web_personal/index.html', context=contexto)
-
-
-def about(request):
-    return render(request, 'web_personal/about.html', context=None)
-
-
-def contact(request):
-    return render(request, 'web_personal/contact.html', context=None)
-
-
-def portafolio(request):
-    return render(request, 'web_personal/portfolio.html', context=None)
-
-def skills(request):
-    return render(request, 'web_personal/skills.html', context=None)
-
