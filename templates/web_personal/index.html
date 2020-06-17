@@ -13,18 +13,16 @@
                 <div class="col-lg-8 col-md-10 mx-auto">
                     <div class="site-heading">
                         <img src="{% static "web_personal/img/emilio.jpg" %}"
-                             alt="Avatar" class="avatar col-lg-5 col-md-5 offset-lg-1 rounded-circle mx-auto d-block">
+                             alt="Avatar" class="avatar rounded-circle col-lg-4 col-md-4 offset-lg-1  mx-auto d-block">
 
-                        <h1 class="cover-heading">{{ usuario.first_name }}</h1>
+                        <h1 class="cover-heading">{{ usuario.name }}</h1>
                         <span class="subheading">{{ usuario.career }}</span>
                         <p class="lead">{{ usuario.description }}</p>
-
                     </div>
                 </div>
             </div>
         </div>
     </header>
-
     <!-- About me -->
     <header class="masthead" style="background-image: url('{% static "web_personal/img/about-bg.jpg" %}')">
         <div class="overlay"></div>
@@ -49,7 +47,7 @@
                 <!--src="{% static "web_personal/img/avatar.jpg" %}"-->
             </div>
             <div class="col-lg-7 col-md-8">
-                <h2 class="section-heading">{{ usuario.first_name }}</h2>
+                <h2 class="section-heading">{{ usuario.name }}</h2>
                 <p>{{ usuario.biography }}</p>
 
             </div>
@@ -78,7 +76,9 @@
         {% for p in proyectos %}
             <div class="row project">
                 <div class="col-lg-3 col-md-4 offset-lg-1">
-                    <img class="img-fluid" src="{{ p.image }}" alt="{{ p.image }}">
+                    <img class="img-fluid" src="
+                            {% if p.image %}{{ p.image.url }}{% else %}{% static 'web_personal/img/work.jpg' %}{% endif %}"
+                         alt="">
                 </div>
                 <div class="col-lg-7 col-md-8">
                     <h2 class="section-heading title">{{ p.name }}</h2>
@@ -86,9 +86,6 @@
                     <p><a href="{{ p.link }}">Más información</a></p>
                 </div>
             </div>
-        {% endfor %}
-        {% for foo in proyectos %}
-            {{ foo.proyectos }}
         {% endfor %}
 
 

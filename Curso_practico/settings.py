@@ -38,8 +38,15 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # Propias
+    'bootstrap4',
     # Web_Personal
-    'apps.web_personal.web_personal'
+    'apps.web_personal.web_personal',
+    # web_empresarial
+    # web_playground
+    # proyectos
+    'apps.proyectos.farmacia',
+    'apps.proyectos.renta_coches',
+
 ]
 
 MIDDLEWARE = [
@@ -109,7 +116,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'es'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Mexico_City'
 
 USE_I18N = True
 

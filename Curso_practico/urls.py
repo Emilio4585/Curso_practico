@@ -16,7 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+from . import settings  # add this for media
+from django.contrib.staticfiles.urls import static  # add this for media
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns  # add this for media
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('apps.web_personal.web_personal.urls'), name='web_personal')
+    path('', include('apps.web_personal.web_personal.urls'), name='web_personal'),
+    path('farmacia/', include('apps.proyectos.farmacia.urls'), name='farmacia'),
 ]
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)  # add this for media

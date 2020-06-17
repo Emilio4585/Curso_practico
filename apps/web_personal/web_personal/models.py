@@ -1,23 +1,17 @@
 from django.db import models
-from django.contrib.auth.models import User as usr
-
 
 # Create your models here.
 class User(models.Model):
-    user = models.OneToOneField(
-        usr,
-        on_delete=models.CASCADE,
-        primary_key=True,
-    )
-    career = models.CharField(max_length=50)
-    year = models.DateField()
-    description = models.TextField(max_length=500)
-    phone = models.CharField(max_length=50)
-    fee = models.CharField(max_length=50)
-    biography = models.TextField(max_length=500)
+    name = models.CharField(max_length=50, verbose_name='Nombre')
+    career = models.CharField(max_length=50, verbose_name='Carrera')
+    year = models.DateField(auto_now_add=True, verbose_name='Año')
+    description = models.TextField(max_length=500, verbose_name='Descripcion')
+    phone = models.CharField(max_length=50, verbose_name='Telefono')
+    fee = models.CharField(max_length=50, verbose_name='Honorarios')
+    biography = models.TextField(max_length=500, verbose_name='Biografia')
 
     def __str__(self):
-        return self.user.first_name
+        return self.name
 
     class Meta:
         verbose_name = 'User'
@@ -25,11 +19,13 @@ class User(models.Model):
 
 
 class Projects(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
-    name = models.CharField(max_length=50, null=True)
-    description = models.TextField(max_length=500, null=True)
-    link = models.CharField(max_length=100, null=True)
-    image = models.ImageField(max_length=100, null=True)
+    name = models.CharField(max_length=50, null=True, verbose_name='Nombre')
+    description = models.TextField(max_length=500, null=True, verbose_name='Descripcion')
+    link = models.CharField(max_length=100, null=True, verbose_name='Link')
+    image = models.ImageField(max_length=100, null=True, upload_to='web_personal/projects', verbose_name='Imagen',
+                              blank=True)
+    created = models.DateField(auto_now_add=True, verbose_name='Creado')
+    updated = models.DateField(auto_now_ad=True, verbose_name='Año')
 
     def __str__(self):
         return self.name
@@ -40,7 +36,6 @@ class Projects(models.Model):
 
 
 class Skills(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
     name = models.CharField(max_length=50, null=True)
     domain = models.IntegerField(null=True)
     color = models.CharField(max_length=20, null=True)
