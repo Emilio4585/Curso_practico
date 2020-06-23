@@ -16,39 +16,39 @@ class CochesListado(ListView):
     model = Coches
 
 
-class ConductorDetalle(DetailView):
+class CochesDetalle(DetailView):
     model = Coches
 
 
-class ConductorCrear(SuccessMessageMixin, CreateView):
+class CochesCrear(SuccessMessageMixin, CreateView):
     model = Coches
     form = Coches
     fields = "__all__"
-    success_message = 'Conductor Creado Correctamente !'  # Mostramos este Mensaje luego de Crear un Conductor
+    success_message = 'Coche Creado Correctamente !'  # Mostramos este Mensaje luego de Crear un Conductor
 
     # Redireccionamos a la página principal luego de crear un registro o coche
     def get_success_url(self):
         return reverse('leer')  # Redireccionamos a la vista principal 'leer'
 
 
-class ConductorActualizar(SuccessMessageMixin, UpdateView):
+class CochesActualizar(SuccessMessageMixin, UpdateView):
     model = Coches
     form = Coches
     fields = "__all__"
-    success_message = 'Conductor Actualizado Correctamente !'  # Mostramos este Mensaje luego de Editar un Conductor
+    success_message = 'Coche Actualizado Correctamente !'  # Mostramos este Mensaje luego de Editar un Conductor
 
     # Redireccionamos a la página principal luego de actualizar un registro o coche
     def get_success_url(self):
         return reverse('leer')  # Redireccionamos a la vista principal 'leer'
 
 
-class ConductorEliminar(SuccessMessageMixin, DeleteView):
+class CochesEliminar(SuccessMessageMixin, DeleteView):
     model = Coches
     form = Coches
     fields = "__all__"
 
     # Redireccionamos a la página principal luego de eliminar un registro o coche
     def get_success_url(self):
-        success_message = 'Conductor Eliminado Correctamente !'  # Mostramos este Mensaje luego de Editar un Conductor
+        success_message = 'Coche Eliminado Correctamente !'  # Mostramos este Mensaje luego de Editar un Conductor
         messages.success(self.request, (success_message))
         return reverse('leer')  # Redireccionamos a la vista principal 'leer'
