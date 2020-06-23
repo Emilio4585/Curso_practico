@@ -1,14 +1,15 @@
 from django.db import models
 
+
 # Create your models here.
 class User(models.Model):
-    name = models.CharField(max_length=50, verbose_name='Nombre')
-    career = models.CharField(max_length=50, verbose_name='Carrera')
-    year = models.DateField(auto_now_add=True, verbose_name='Año')
-    description = models.TextField(max_length=500, verbose_name='Descripcion')
-    phone = models.CharField(max_length=50, verbose_name='Telefono')
-    fee = models.CharField(max_length=50, verbose_name='Honorarios')
-    biography = models.TextField(max_length=500, verbose_name='Biografia')
+    name = models.CharField(max_length=50, verbose_name='Nombre', blank=True)
+    career = models.CharField(max_length=50, verbose_name='Carrera', blank=True)
+    year = models.DateField(auto_now_add=True, verbose_name='Año', blank=True)
+    description = models.TextField(max_length=500, verbose_name='Descripcion', blank=True)
+    phone = models.CharField(max_length=50, verbose_name='Telefono', blank=True)
+    fee = models.CharField(max_length=50, verbose_name='Honorarios', blank=True)
+    biography = models.TextField(max_length=500, verbose_name='Biografia', blank=True)
 
     def __str__(self):
         return self.name
@@ -25,7 +26,7 @@ class Projects(models.Model):
     image = models.ImageField(max_length=100, null=True, upload_to='web_personal/projects', verbose_name='Imagen',
                               blank=True)
     created = models.DateField(auto_now_add=True, verbose_name='Creado')
-    updated = models.DateField(auto_now_ad=True, verbose_name='Año')
+    updated = models.DateField(auto_now=True, verbose_name='Modificado')
 
     def __str__(self):
         return self.name

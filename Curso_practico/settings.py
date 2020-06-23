@@ -15,7 +15,6 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
@@ -26,7 +25,6 @@ SECRET_KEY = '4)ycas@+_@lw3md7(9t&#_^a_mmalw6=bqlt6%-^_x0p^y%6=8'
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
-
 
 # Application definition
 
@@ -44,8 +42,12 @@ INSTALLED_APPS = [
     # web_empresarial
     # web_playground
     # proyectos
-    'apps.proyectos.farmacia',
-    'apps.proyectos.renta_coches',
+    # Renta de Coches
+    'apps.proyectos.renta_coches.rutas',
+    'apps.proyectos.renta_coches.coches',
+    'apps.proyectos.renta_coches.pasajero',
+    'apps.proyectos.renta_coches.reserva',
+    'apps.proyectos.renta_coches.conductores',
 
 ]
 
@@ -80,7 +82,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'Curso_practico.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
@@ -90,7 +91,6 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
@@ -110,7 +110,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/3.0/topics/i18n/
 
@@ -124,12 +123,11 @@ USE_L10N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'), )
+STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 STATICFILES_FINDERS = [
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',

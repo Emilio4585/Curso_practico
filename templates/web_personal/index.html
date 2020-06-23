@@ -15,9 +15,9 @@
                         <img src="{% static "web_personal/img/emilio.jpg" %}"
                              alt="Avatar" class="avatar rounded-circle col-lg-4 col-md-4 offset-lg-1  mx-auto d-block">
 
-                        <h1 class="cover-heading">{{ usuario.name }}</h1>
-                        <span class="subheading">{{ usuario.career }}</span>
-                        <p class="lead">{{ usuario.description }}</p>
+                        <h1 class="cover-heading">{{ user.name }}</h1>
+                        <span class="subheading">{{ user.career }}</span>
+                        <p class="lead">{{ user.description }}</p>
                     </div>
                 </div>
             </div>
@@ -47,8 +47,8 @@
                 <!--src="{% static "web_personal/img/avatar.jpg" %}"-->
             </div>
             <div class="col-lg-7 col-md-8">
-                <h2 class="section-heading">{{ usuario.name }}</h2>
-                <p>{{ usuario.biography }}</p>
+                <h2 class="section-heading">{{ user.name }}</h2>
+                <p>{{ user.biography }}</p>
 
             </div>
         </div>
@@ -73,7 +73,7 @@
     <!-- Portafolio -->
     <div class="container">
         <!-- Proyecto -->
-        {% for p in proyectos %}
+        {% for p in projects %}
             <div class="row project">
                 <div class="col-lg-3 col-md-4 offset-lg-1">
                     <img class="img-fluid" src="
@@ -115,8 +115,8 @@
                     voluptates odit, fuga atque ea nobis sit soluta odio, adipisci quas excepturi maxime quae totam
                     ducimus consectetur?</p>
                 <br>
-                <p><b>Teléfono:</b> {{ usuario.phone }}</p>
-                <p><b>Honorarios:</b> {{ usuario.fee }}</p>
+                <p><b>Teléfono:</b> {{ user.phone }}</p>
+                <p><b>Honorarios:</b> {{ user.fee }}</p>
             </div>
         </div>
     </div>
