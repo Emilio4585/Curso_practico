@@ -28,7 +28,7 @@ class RutaCrear(SuccessMessageMixin, CreateView):
 
     # Redireccionamos a la página principal luego de crear un registro o ruta
     def get_success_url(self):
-        return reverse('leer')  # Redireccionamos a la vista principal 'leer'
+        return reverse('leer_ruta')  # Redireccionamos a la vista principal 'leer'
 
 
 class RutaActualizar(SuccessMessageMixin, UpdateView):
@@ -39,7 +39,7 @@ class RutaActualizar(SuccessMessageMixin, UpdateView):
 
     # Redireccionamos a la página principal luego de actualizar un registro o ruta
     def get_success_url(self):
-        return reverse('leer')  # Redireccionamos a la vista principal 'leer'
+        return reverse('leer_ruta')  # Redireccionamos a la vista principal 'leer'
 
 
 class RutaEliminar(SuccessMessageMixin, DeleteView):
@@ -51,4 +51,4 @@ class RutaEliminar(SuccessMessageMixin, DeleteView):
     def get_success_url(self):
         success_message = 'Ruta Eliminado Correctamente !'  # Mostramos este Mensaje luego de Editar un Ruta
         messages.success(self.request, (success_message))
-        return reverse('leer')  # Redireccionamos a la vista principal 'leer'
+        return reverse('leer_ruta')  # Redireccionamos a la vista principal 'leer'

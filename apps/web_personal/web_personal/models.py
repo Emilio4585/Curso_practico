@@ -27,7 +27,7 @@ class Projects(models.Model):
                               blank=True)
     created = models.DateField(auto_now_add=True, verbose_name='Creado')
     updated = models.DateField(auto_now=True, verbose_name='Modificado')
-
+    user_id = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
     def __str__(self):
         return self.name
 
@@ -40,7 +40,7 @@ class Skills(models.Model):
     name = models.CharField(max_length=50, null=True)
     domain = models.IntegerField(null=True)
     color = models.CharField(max_length=20, null=True)
-
+    user_id = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
     def __str__(self):
         return self.name
 

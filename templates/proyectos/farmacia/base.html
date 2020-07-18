@@ -19,84 +19,55 @@
     {% endblock %}
 
     <!-- Fontfaces CSS-->
-    <link href="{% static "proyectos/farmacia/css/font-face.css" %}" rel="stylesheet" media="all">
-    <link href="{% static "proyectos/farmacia/vendor/font-awesome-4.7/css/font-awesome.min.css" %}" rel="stylesheet"
+    <link href="{% static "proyectos/farmacia/../../../static/proyectos/cooladmin/css/font-face.css" %}"
+          rel="stylesheet" media="all">
+    <link href="{% static "proyectos/farmacia/../../../static/proyectos/cooladmin/vendor/font-awesome-4.7/css/font-awesome.min.css" %}"
+          rel="stylesheet"
           media="all">
-    <link href="{% static "proyectos/farmacia/vendor/font-awesome-5/css/fontawesome-all.min.css" %}" rel="stylesheet"
+    <link href="{% static "proyectos/farmacia/../../../static/proyectos/cooladmin/vendor/font-awesome-5/css/fontawesome-all.min.css" %}"
+          rel="stylesheet"
           media="all">
-    <link href="{% static "proyectos/farmacia/vendor/mdi-font/css/material-design-iconic-font.min.css" %}"
+    <link href="{% static "proyectos/farmacia/../../../static/proyectos/cooladmin/vendor/mdi-font/css/material-design-iconic-font.min.css" %}"
           rel="stylesheet" media="all">
 
 
     <!-- Bootstrap CSS-->
-    <link href="{% static "proyectos/farmacia/vendor/bootstrap-4.1/bootstrap.min.css" %}" rel="stylesheet" media="all">
+    <link href="{% static "proyectos/farmacia/../../../static/proyectos/cooladmin/vendor/bootstrap-4.1/bootstrap.min.css" %}"
+          rel="stylesheet" media="all">
 
     <!-- Vendor CSS-->
-    <link href="{% static "proyectos/farmacia/vendor/animsition/animsition.min.css" %}" rel="stylesheet" media="all">
-    <link href="{% static "proyectos/farmacia/vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css" %}"
+    <link href="{% static "proyectos/farmacia/../../../static/proyectos/cooladmin/vendor/animsition/animsition.min.css" %}"
           rel="stylesheet" media="all">
-    <link href="{% static "proyectos/farmacia/vendor/wow/animate.css" %}" rel="stylesheet" media="all">
-    <link href="{% static "proyectos/farmacia/vendor/css-hamburgers/hamburgers.min.css" %}" rel="stylesheet"
+    <link href="{% static "proyectos/farmacia/../../../static/proyectos/cooladmin/vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css" %}"
+          rel="stylesheet" media="all">
+    <link href="{% static "proyectos/farmacia/../../../static/proyectos/cooladmin/vendor/wow/animate.css" %}"
+          rel="stylesheet" media="all">
+    <link href="{% static "proyectos/farmacia/../../../static/proyectos/cooladmin/vendor/css-hamburgers/hamburgers.min.css" %}"
+          rel="stylesheet"
           media="all">
-    <link href="{% static "proyectos/farmacia/vendor/slick/slick.css" %}" rel="stylesheet" media="all">
-    <link href="{% static "proyectos/farmacia/vendor/select2/select2.min.css" %}" rel="stylesheet" media="all">
-    <link href="{% static "proyectos/farmacia/vendor/perfect-scrollbar/perfect-scrollbar.css" %}" rel="stylesheet"
+    <link href="{% static "proyectos/farmacia/../../../static/proyectos/cooladmin/vendor/slick/slick.css" %}"
+          rel="stylesheet" media="all">
+    <link href="{% static "proyectos/farmacia/../../../static/proyectos/cooladmin/vendor/select2/select2.min.css" %}"
+          rel="stylesheet" media="all">
+    <link href="{% static "proyectos/farmacia/../../../static/proyectos/cooladmin/vendor/perfect-scrollbar/perfect-scrollbar.css" %}"
+          rel="stylesheet"
           media="all">
 
     <!-- Main CSS-->
-    <link href="{% static "proyectos/farmacia/css/theme.css" %}" rel="stylesheet" media="all">
+    <link href="{% static "proyectos/farmacia/../../../static/proyectos/cooladmin/css/theme.css" %}" rel="stylesheet"
+          media="all">
 
 </head>
 
 <body class="animsition">
 <div class="page-wrapper">
-    <!-- HEADER MOBILE-->
-    <header class="header-mobile d-block d-lg-none">
-        <div class="header-mobile__bar">
-            <div class="container-fluid">
-                <div class="header-mobile-inner">
-                    <a class="logo" href="index.html">
-                        <img src="{% static "proyectos/farmacia/images/icon/logo.png" %}" alt="CoolAdmin"/>
-                    </a>
-                    <button class="hamburger hamburger--slider" type="button">
-                            <span class="hamburger-box">
-                                <span class="hamburger-inner"></span>
-                            </span>
-                    </button>
-                </div>
-            </div>
-        </div>
-        <nav class="navbar-mobile">
-            <div class="container-fluid">
-                <ul class="navbar-mobile__list list-unstyled">
-                    <li class="has-sub">
-                        <a class="js-arrow" href="#">
-                            <i class="fas fa-tachometer-alt"></i>Dashboard</a>
-                        <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
-                            <li>
-                                <a href="index.html">Dashboard 1</a>
-                            </li>
-                            <li>
-                                <a href="index2.html">Dashboard 2</a>
-                            </li>
-                            <li>
-                                <a href="index3.html">Dashboard 3</a>
-                            </li>
-                            <li>
-                                <a href="index4.html">Dashboard 4</a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-    <!-- END HEADER MOBILE-->
+
     <!-- MENU SIDEBAR-->
     <aside class="menu-sidebar d-none d-lg-block">
         <div class="logo">
             <a href="#">
-                <img src="{% static "proyectos/farmacia/images/icon/logo.png" %}" alt="Cool Admin"/>
+                <img src="{% static "proyectos/farmacia/../../../static/proyectos/cooladmin/images/icon/logo.png" %}"
+                     alt="Cool Admin"/>
             </a>
         </div>
         <div class="menu-sidebar__content js-scrollbar1">
@@ -113,14 +84,14 @@
                             <i class="fas fa-tachometer-alt"></i>Clientes</a>
                         <ul class="list-unstyled navbar__sub-list js-sub-list">
                             <li>
-                                <a href="{% url 'index4' %}">
+                                <a href="{% url 'renta' %}">
                                     <i class="fas fa-tachometer-alt"></i>Lista
                                 </a>
                             </li>
                         </ul>
                         <ul class="list-unstyled navbar__sub-list js-sub-list">
                             <li>
-                                <a href="{% url 'index4' %}">
+                                <a href="{% url 'renta' %}">
                                     <i class="fas fa-tachometer-alt"></i>Nuevo
                                 </a>
                             </li>
@@ -131,7 +102,7 @@
                             <i class="fas fa-tachometer-alt"></i>Distribuidores</a>
                         <ul class="list-unstyled navbar__sub-list js-sub-list">
                             <li>
-                                <a href="{% url 'index4' %}">
+                                <a href="{% url 'renta' %}">
                                     <i class="fas fa-tachometer-alt"></i>Nuevo
                                 </a>
                             </li>
@@ -142,7 +113,7 @@
                             <i class="fas fa-tachometer-alt"></i>Clientes</a>
                         <ul class="list-unstyled navbar__sub-list js-sub-list">
                             <li>
-                                <a href="{% url 'index4' %}">
+                                <a href="{% url 'renta' %}">
                                     <i class="fas fa-tachometer-alt"></i>Nuevo
                                 </a>
                             </li>
@@ -153,7 +124,7 @@
                             <i class="fas fa-tachometer-alt"></i>Laboratorios</a>
                         <ul class="list-unstyled navbar__sub-list js-sub-list">
                             <li>
-                                <a href="{% url 'index4' %}">
+                                <a href="{% url 'renta' %}">
                                     <i class="fas fa-tachometer-alt"></i>Nuevo
                                 </a>
                             </li>
@@ -164,7 +135,7 @@
                             <i class="fas fa-tachometer-alt"></i>Medicamentos</a>
                         <ul class="list-unstyled navbar__sub-list js-sub-list">
                             <li>
-                                <a href="{% url 'index4' %}">
+                                <a href="{% url 'renta' %}">
                                     <i class="fas fa-tachometer-alt"></i>Nuevo
                                 </a>
                             </li>
@@ -175,7 +146,7 @@
                             <i class="fas fa-tachometer-alt"></i>Compras</a>
                         <ul class="list-unstyled navbar__sub-list js-sub-list">
                             <li>
-                                <a href="{% url 'index4' %}">
+                                <a href="{% url 'renta' %}">
                                     <i class="fas fa-tachometer-alt"></i>Nuevo
                                 </a>
                             </li>
@@ -186,7 +157,7 @@
                             <i class="fas fa-tachometer-alt"></i>Ventas</a>
                         <ul class="list-unstyled navbar__sub-list js-sub-list">
                             <li>
-                                <a href="{% url 'index4' %}">
+                                <a href="{% url 'renta' %}">
                                     <i class="fas fa-tachometer-alt"></i>Nuevo
                                 </a>
                             </li>
@@ -226,7 +197,7 @@
                                         </div>
                                         <div class="mess__item">
                                             <div class="image img-cir img-40">
-                                                <img src="{% static "proyectos/farmacia/images/icon/avatar-06.jpg" %}"
+                                                <img src="{% static "proyectos/farmacia/../../../static/proyectos/cooladmin/images/icon/avatar-06.jpg" %}"
                                                      alt="Michelle Moreno"/>
                                             </div>
                                             <div class="content">
@@ -237,7 +208,7 @@
                                         </div>
                                         <div class="mess__item">
                                             <div class="image img-cir img-40">
-                                                <img src="{% static "proyectos/farmacia/images/icon/avatar-04.jpg" %}"
+                                                <img src="{% static "proyectos/farmacia/../../../static/proyectos/cooladmin/images/icon/avatar-04.jpg" %}"
                                                      alt="Diane Myers"/>
                                             </div>
                                             <div class="content">
@@ -260,7 +231,7 @@
                                         </div>
                                         <div class="email__item">
                                             <div class="image img-cir img-40">
-                                                <img src="{% static "proyectos/farmacia/images/icon/avatar-06.jpg" %}"
+                                                <img src="{% static "proyectos/farmacia/../../../static/proyectos/cooladmin/images/icon/avatar-06.jpg" %}"
                                                      alt="Cynthia Harvey"/>
                                             </div>
                                             <div class="content">
@@ -270,7 +241,7 @@
                                         </div>
                                         <div class="email__item">
                                             <div class="image img-cir img-40">
-                                                <img src="{% static "proyectos/farmacia/images/icon/avatar-05.jpg" %}"
+                                                <img src="{% static "proyectos/farmacia/../../../static/proyectos/cooladmin/images/icon/avatar-05.jpg" %}"
                                                      alt="Cynthia Harvey"/>
                                             </div>
                                             <div class="content">
@@ -280,7 +251,7 @@
                                         </div>
                                         <div class="email__item">
                                             <div class="image img-cir img-40">
-                                                <img src="{% static "proyectos/farmacia/images/icon/avatar-04.jpg" %}"
+                                                <img src="{% static "proyectos/farmacia/../../../static/proyectos/cooladmin/images/icon/avatar-04.jpg" %}"
                                                      alt="Cynthia Harvey"/>
                                             </div>
                                             <div class="content">
@@ -336,7 +307,7 @@
                             <div class="account-wrap">
                                 <div class="account-item clearfix js-item-menu">
                                     <div class="image">
-                                        <img src="{% static "proyectos/farmacia/images/icon/avatar-01.jpg" %}"
+                                        <img src="{% static "proyectos/farmacia/../../../static/proyectos/cooladmin/images/icon/avatar-01.jpg" %}"
                                              alt="John Doe"/>
                                     </div>
                                     <div class="content">
@@ -346,7 +317,7 @@
                                         <div class="info clearfix">
                                             <div class="image">
                                                 <a href="#">
-                                                    <img src="{% static "proyectos/farmacia/images/icon/avatar-01.jpg" %}"
+                                                    <img src="{% static "proyectos/farmacia/../../../static/proyectos/cooladmin/images/icon/avatar-01.jpg" %}"
                                                          alt="John Doe"/>
                                                 </a>
                                             </div>
@@ -390,30 +361,30 @@
         {% endblock %}
 
         <!-- Jquery JS-->
-        <script src="{% static "proyectos/farmacia/vendor/jquery-3.2.1.min.js" %}"></script>
+        <script src="{% static "proyectos/farmacia/../../../static/proyectos/cooladmin/vendor/jquery-3.2.1.min.js" %}"></script>
         <!-- Bootstrap JS-->
-        <script src="{% static "proyectos/farmacia/vendor/bootstrap-4.1/popper.min.js" %}"></script>
-        <script src="{% static "proyectos/farmacia/vendor/bootstrap-4.1/bootstrap.min.js" %}"></script>
+        <script src="{% static "proyectos/farmacia/../../../static/proyectos/cooladmin/vendor/bootstrap-4.1/popper.min.js" %}"></script>
+        <script src="{% static "proyectos/farmacia/../../../static/proyectos/cooladmin/vendor/bootstrap-4.1/bootstrap.min.js" %}"></script>
         <!-- Vendor JS       -->
-        <script src="{% static "proyectos/farmacia/vendor/slick/slick.min.js" %}">
+        <script src="{% static "proyectos/farmacia/../../../static/proyectos/cooladmin/vendor/slick/slick.min.js" %}">
         </script>
         {% block Extra_js %}
 
         {% endblock %}
-        <script src="{% static "proyectos/farmacia/vendor/wow/wow.min.js" %}"></script>
-        <script src="{% static "proyectos/farmacia/vendor/animsition/animsition.min.js" %}"></script>
-        <script src="{% static "proyectos/farmacia/vendor/bootstrap-progressbar/bootstrap-progressbar.min.js" %}">
+        <script src="{% static "proyectos/farmacia/../../../static/proyectos/cooladmin/vendor/wow/wow.min.js" %}"></script>
+        <script src="{% static "proyectos/farmacia/../../../static/proyectos/cooladmin/vendor/animsition/animsition.min.js" %}"></script>
+        <script src="{% static "proyectos/farmacia/../../../static/proyectos/cooladmin/vendor/bootstrap-progressbar/bootstrap-progressbar.min.js" %}">
         </script>
-        <script src="{% static "proyectos/farmacia/vendor/counter-up/jquery.waypoints.min.js" %}"></script>
-        <script src="{% static "proyectos/farmacia/vendor/counter-up/jquery.counterup.min.js" %}">
+        <script src="{% static "proyectos/farmacia/../../../static/proyectos/cooladmin/vendor/counter-up/jquery.waypoints.min.js" %}"></script>
+        <script src="{% static "proyectos/farmacia/../../../static/proyectos/cooladmin/vendor/counter-up/jquery.counterup.min.js" %}">
         </script>
-        <script src="{% static "proyectos/farmacia/vendor/circle-progress/circle-progress.min.js" %}"></script>
-        <script src="{% static "proyectos/farmacia/vendor/perfect-scrollbar/perfect-scrollbar.js" %}"></script>
-        <script src="{% static "proyectos/farmacia/vendor/chartjs/Chart.bundle.min.js" %}"></script>
-        <script src="{% static "proyectos/farmacia/vendor/select2/select2.min.js" %}">
+        <script src="{% static "proyectos/farmacia/../../../static/proyectos/cooladmin/vendor/circle-progress/circle-progress.min.js" %}"></script>
+        <script src="{% static "proyectos/farmacia/../../../static/proyectos/cooladmin/vendor/perfect-scrollbar/perfect-scrollbar.js" %}"></script>
+        <script src="{% static "proyectos/farmacia/../../../static/proyectos/cooladmin/vendor/chartjs/Chart.bundle.min.js" %}"></script>
+        <script src="{% static "proyectos/farmacia/../../../static/proyectos/cooladmin/vendor/select2/select2.min.js" %}">
         </script>
 
         <!-- Main JS-->
-        <script src="{% static "proyectos/farmacia/js/main.js" %}"></script>
+        <script src="{% static "proyectos/farmacia/../../../static/proyectos/cooladmin/js/main.js" %}"></script>
 
 </body>

@@ -4,12 +4,14 @@ from apps.proyectos.renta_coches.pasajero.views import PasajeroListado, Pasajero
     PasajeroActualizar, PasajeroEliminar
 
 urlpatterns = [
-    path('pasajeros/', PasajeroListado.as_view(template_name="proyectos/renta_coches/rutas/index.html"), name='leer'),
+    path('pasajeros/', PasajeroListado.as_view(template_name="proyectos/renta_coches/rutas/index.html"),
+         name='leer_pasajeros'),
     path('pasajeros/detalle/<int:pk>',
-         PasajeroDetalle.as_view(template_name="proyectos/renta_coches/rutas/detalles.html"), name='detalles'),
+         PasajeroDetalle.as_view(template_name="proyectos/renta_coches/rutas/detalles.html"), name='detalles_pasajero'),
     path('pasajeros/crear', PasajeroCrear.as_view(template_name="proyectos/renta_coches/rutas/crear.html"),
-         name='crear'),
+         name='crear_pasajero'),
     path('pasajeros/editar/<int:pk>',
-         PasajeroActualizar.as_view(template_name="proyectos/renta_coches/rutas/actualizar.html"), name='actualizar'),
-    path('pasajeros/eliminar/<int:pk>', PasajeroEliminar.as_view(), name='eliminar'),
+         PasajeroActualizar.as_view(template_name="proyectos/renta_coches/rutas/actualizar.html"),
+         name='actualizar_pasajero'),
+    path('pasajeros/eliminar/<int:pk>', PasajeroEliminar.as_view(), name='eliminar_pasajero'),
 ]

@@ -77,6 +77,7 @@
             <div class="row project">
                 <div class="col-lg-3 col-md-4 offset-lg-1">
                     <img class="img-fluid" src="
+
                             {% if p.image %}{{ p.image.url }}{% else %}{% static 'web_personal/img/work.jpg' %}{% endif %}"
                          alt="">
                 </div>
@@ -86,6 +87,17 @@
                     <p><a href="{{ p.link }}">Más información</a></p>
                 </div>
             </div>
+        {% empty %}
+            <header class="">
+                <div class="overlay"></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-md-10 mx-auto">
+                            <h1>No hay proyectos aun</h1>
+                        </div>
+                    </div>
+                </div>
+            </header>
         {% endfor %}
 
 

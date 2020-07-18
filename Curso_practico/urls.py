@@ -24,11 +24,11 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('apps.web_personal.web_personal.urls'), name='web_personal'),
     # renta de coches
-    path('renta/', include('apps.proyectos.renta_coches.coches.urls'), name='renta'),
-    path('renta/', include('apps.proyectos.renta_coches.conductores.urls'), name='renta'),
-    path('renta/', include('apps.proyectos.renta_coches.pasajero.urls'), name='renta'),
-    path('renta/', include('apps.proyectos.renta_coches.reserva.urls'), name='renta'),
-    path('renta/', include('apps.proyectos.renta_coches.rutas.urls'), name='renta'),
+    path('renta/', include('apps.proyectos.renta_coches.coches.urls'), name='coches'),
+    path('renta/', include('apps.proyectos.renta_coches.conductores.urls'), name='conductores'),
+    path('renta/', include('apps.proyectos.renta_coches.pasajero.urls'), name='pasajeros'),
+    path('renta/', include('apps.proyectos.renta_coches.reserva.urls'), name='reservas'),
+    path('renta/', include('apps.proyectos.renta_coches.rutas.urls'), name='rutas'),
     # path('farmacia/', include('apps.proyectos.farmacia.urls'), name='farmacia'),
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)  # add this for media

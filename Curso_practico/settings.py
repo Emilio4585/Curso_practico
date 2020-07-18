@@ -35,8 +35,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    # Propias
-    'bootstrap4',
     # Web_Personal
     'apps.web_personal.web_personal',
     # web_empresarial
@@ -48,6 +46,8 @@ INSTALLED_APPS = [
     'apps.proyectos.renta_coches.pasajero',
     'apps.proyectos.renta_coches.reserva',
     'apps.proyectos.renta_coches.conductores',
+    # Calculo Vectorial formulas
+    'apps.calculo_Vectorial'
 
 ]
 
